@@ -58,6 +58,33 @@ url: "https://docs.example.com/getting-started"
 ---
 ```
 
+## MCP Server
+
+webpull ships an MCP server so any MCP-compatible agent (Claude Code, Cursor, Windsurf, etc.) can pull and search docs without leaving the chat.
+
+**Register with Claude Code:**
+
+```bash
+claude mcp add webpull bun -- run /path/to/webpull/mcp/index.ts
+```
+
+**Or via `~/.claude/claude_desktop_config.json`:**
+
+```json
+{
+  "mcpServers": {
+    "webpull": {
+      "command": "bunx",
+      "args": ["webpull-mcp"]
+    }
+  }
+}
+```
+
+**Available tools:** `pull_docs`, `search_docs`, `read_doc`, `list_docs`, `run_code`
+
+See [`mcp/README.md`](mcp/README.md) for full details.
+
 ## Requirements
 
 - [Bun](https://bun.sh) runtime

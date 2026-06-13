@@ -5,7 +5,8 @@
 	"module": "src/index.ts",
 	"type": "module",
 	"bin": {
-		"webpull": "bin/webpull"
+		"webpull": "bin/webpull",
+		"webpull-mcp": "mcp/index.ts"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.13",
